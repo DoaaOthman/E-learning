@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>e-learning</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css
+    ">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+  <body id='body' >
+    <div id="loader"></div>
+    <div class="container-fluid" id='content'>
+        <main class=mt-4>
+            <div class="e-learning loading" id='e-learning'>
+                <div class="row h-100 justify-content-center align-items-center">
+                    <div class="speaker">
+                        <img src="assets/images/audio_icon.png"  id="listen" alt="audio_icon" >
+                        <audio controls  hidden id='audio-listen'>
+                                <source src="assets/audio/p21e4.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="header-title">
+                        <h1>Listen and number. Then ask and answer.</h1>
+                    </div>
+                </div>
+                <div class="row page-content">
+                    <div class="content">
+                        <div class="test-quiz">
+                            <div class="item">
+                                <div class="quiz-content">
+                                    <div class="question question_1">
+                                        <div class="quiz-image">
+                                            <img  class='img-qu' src="assets/images/p21e4q1_1.png">
+                                            <audio controls  hidden class='audio-qu'>
+                                                    <source src="assets/audio/p21e4q1_2.mp3" type="audio/mp3">
+                                            </audio>
+                                        </div>
+                                        <div class="queDropDown dropDown_1">
+                                            <!-- <div class="select-selected"></div>
+                                            <div class="select-items">
+                                                <div dataans="incorrect">1</div>
+                                                <div dataans="correct">2</div>
+                                                <div dataans="incorrect">3</div>
+                                                <div dataans="incorrect">4</div>
+                                                <div dataans="incorrect">5</div>
+                                            </div> -->
+                                            
+                                            <div class="select">
+                                                <select class="select-selected selectpicker dropup"  id="select-no1" name="select-no1">
+                                                    <option value="" style='display: none;' selected disabled></option>
+                                                    <option value="1">1</option>
+                                                    <option class='right' dataans="correct"value="2" >2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question question_2">
+                                        <div class="quiz-image">
+                                            <img src="assets/images/p21e4q1_2.png">
+                                            <audio controls  hidden class='audio-qu'>
+                                                <source src="assets/audio/p21e4q1_3.mp3" type="audio/mp3">
+                                            </audio>
+                                        </div>
+                                        <div class="queDropDown dropDown_2">
+                                            <div class="select">
+                                                <select class="select-selected selectpicker dropup"  id="select-no2" name="select-no2">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option class='right'value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question question_3">
+                                        <div class="quiz-image">
+                                            <img  src="assets/images/p21e4q1_3.png">
+                                            <audio controls  hidden class='audio-qu'>
+                                                <source src="assets/audio/p21e4q1_5.mp3" type="audio/mp3">
+                                            </audio>
+                                        </div>
+                                        <div class="queDropDown dropDown_3">
+                                            <div class="select">
+                                                <select class="select-selected selectpicker dropup"  id="select-no3" name="select-no3">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option class='right' value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>					
+                                    </div>
+                                    <div class="question question_4">
+                                        <div class="quiz-image">
+                                            <img  src="assets/images/p21e4q1_4.png">
+                                            <audio controls  hidden class='audio-qu'>
+                                                <source src="assets/audio/p21e4q1_4.mp3" type="audio/mp3">
+                                            </audio>
+                                        </div>
+                                        <div class="queDropDown dropDown_4">
+                                             <div class="select">
+                                                <select class="select-selected selectpicker dropup"  id="select-no4" name="select-no4">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option class='right' value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>					
+                                    </div>
+                                    <div class="question question_5">
+                                        <div class="quiz-image">
+                                            <img  src="assets/images/p21e4q1_5.png">
+                                            <audio controls  hidden class='audio-qu'>
+                                                <source src="assets/audio/p21e4q1_1.mp3" type="audio/mp3">
+                                            </audio>
+                                        </div>
+                                        <div class="queDropDown dropDown_5">
+                                            <div class="select">
+                                                <select class="select-selected selectpicker dropup"  id="select-no5" name="select-no5">
+                                                    <option class='right' value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>					
+                                    </div>
+                                    <audio controls  hidden id='incorrect'>
+                                        <source src="assets/audio/incorrect.mp3" type="audio/mp3">
+                                    </audio>
+                                    <audio controls  hidden id='correct'>
+                                        <source src="assets/audio/correct.mp3" type="audio/mp3">
+                                    </audio>
+                                    <!-- <div data-audiosrc="assets/audio/incorrect.mp3" class="showAnswerCrossMark"></div>
+                                    <div data-audiosrc="assets/audio/correct.mp3" class="showAnswerTickMark"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="row ">
+                            <div id='replay'>
+                                <img class="replay" src='assets/images/replay_icon.png' alt ='replay'/>
+                            </div>
+                            <div id="audio-container" class="col-4 control">
+                                <!-- audio -->
+                                <audio id="audioAll" width="340" height="365">
+                                    <source src="assets/audio/all.mp3" type="video/mp4">
+                                </audio>
+                                <!-- audio Controls -->
+                                <div id="audio-controls">
+                                    <button type="button" id="play-pause" class="play"></button>
+                                    <input type="range" id="seek-bar" value="0">
+                                </div>
+                            </div>
+                            <div id='show-ans'>
+                                <img class='show-ans' src='assets/images/showAns_icon.png' alt='show-ans'/>
+                            </div>
+                        </div> 
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.js"></script>
+    <script src="assets/jquery/script.js"></script>
+    <script>
+//         function zoomIn()
+// {
+//   var Page = document.getElementById('body');
+//   var zoom = parseInt(Page.style.zoom) + 10 +'%'
+//   Page.style.zoom = zoom;
+//   return false;
+// }
+
+// function zoomOut()
+// {
+//   var Page = document.getElementById('body');
+//   var zoom = parseInt(Page.style.zoom) - 10 +'%'
+//   Page.style.zoom = zoom;
+//   return false;
+// }
+    </script>
+</body>
+</html>

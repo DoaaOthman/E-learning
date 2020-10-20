@@ -1,0 +1,556 @@
+
+    @font-face {
+        font-family: 'sassoon_infant_stdregular';
+        src: url('../fonts/sassooninfantstd-webfont.woff2') format('woff2'),
+             url('../fonts/sassooninfantstd-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
+    /* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+#loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/Preloader.gif) 50% 50% no-repeat rgb(255,255,255);
+    transition: all 0.5s ease;
+    -webkit-animation: animatebottom 1s ease-in-out infinite;
+    animation: animatebottom 1s ease-in-out infinite;
+  }
+  
+
+
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; right:0; opacity:1 }
+    
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px;  opacity:0 } 
+    to{ bottom:0;right: 0;  opacity:1 }
+  }
+.loading{
+    position: relative;
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animatebottom;
+    animation-duration: 0.5s
+}
+
+
+#content {
+    display: none;   
+}
+
+
+    body {
+        font-family: 'sassoon_infant_stdregular', Arial, sans-serif;
+        font-weight:normal;
+        font-style:normal;
+        font-size: 12pt;
+        overflow: hidden;
+        zoom: 100%;
+        }
+        .speaker {
+            padding: 0 11px;
+            margin-bottom: 16px;
+        }
+    .header-title h1{
+        font-size: 2em;
+    }
+    .header-title {
+        padding: 10px 0px;
+    }
+    .speaker img{
+        width: 45px;
+    }
+    .page-content{
+        width: 100%;
+    }
+    .content{
+        background-color: #0fa0c5;
+        height: 650px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        position: relative;
+        z-index: 99999999;
+    }
+    .test-quiz{
+        background-color: #fff;
+        height: 690PX;
+        margin: 20px;
+        width: 97%;
+        margin: 20px;
+        margin-top: -20PX;
+        border: 2.75pt solid #f5821f;
+        /* position: absolute; */
+        border-radius: 10pt;
+        z-index: 2;
+    }
+    .control{
+        /* background: #deecf6; */
+        height: 150px;
+        display: flex;
+        position: relative;
+        margin-top: 45px;
+        margin-left: 40px;
+    }
+    /* audio{
+        position: absolute;
+        top: 40px;
+        left: 100px;
+    }
+    #audio-container {
+        width: 640px;
+        height: 365px;
+        position: relative;
+    } */
+    
+    #audio-controls {
+        /* position: absolute;
+        width: 350px;
+        bottom: 30px;
+        left: 150px;
+        right: 0; */
+        height: 60px;
+        padding: 5px;
+        border-radius: 50px;
+        border: 3px solid #f5821f;
+        opacity: 1;
+        -webkit-transition: opacity .3s;
+        -moz-transition: opacity .3s;
+        -o-transition: opacity .3s;
+        -ms-transition: opacity .3s;
+        transition: opacity .3s;
+        background-image: linear-gradient(bottom, #ff7c0c 13%, #fdcba2 100%);
+        background-image: -o-linear-gradient(bottom, #ff7c0c 13%, #fdcba2 100%);
+        background-image: -moz-linear-gradient(bottom, #ff7c0c 13%, #fdcba2 100%);
+        background-image: -webkit-linear-gradient(bottom,#ff7c0c 13%, #fdcba2 100%);
+        background-image: -ms-linear-gradient(bottom, #ff7c0c 13%, #fdcba2 100%);
+        background-image: linear-gradient(bottom, #ff7c0c 13%, #fdcba2 100%);
+    
+    }
+
+    div#track, input[type="range" i] ,input[type=range]::-webkit-slider-runnable-track{
+    color: #fff !important;
+    }
+    #audio-container:hover #audio-controls {
+        opacity: .9;
+    }
+    div#audio-controls button {
+        border: none;
+        margin-top: 30px;
+        margin-left: 40px;
+    }
+    div#audio-controls:focus {
+        outline: 0;
+    }
+    button {
+        background-size: cover;
+        height: 20px;
+        width: 20px;
+        padding: 7px;
+        margin: 5px;
+        background-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        position: absolute;
+        top: -8px;
+        left: -6px;
+    }
+    button#play-pause:focus {
+        outline: 0;
+    }
+    button#play-pause:hover {
+        border: 0;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+    
+    #seek-bar {
+        width: 250px;
+        margin-top: 22px;
+        margin-left: 42px;
+    }
+  input[type=range]::-moz-range-track{
+    /* margin-top: 14px !important; */
+    }
+
+    footer {
+        z-index: -99999;
+        /* position: relative; */
+        height: 150px;
+        margin: 0 auto;
+        width: 100%;
+        background: #deecf6;
+    }
+  
+    input[type=range] {
+        -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+        width: 100%; /* Specific width is required for Firefox. */
+        background: transparent; /* Otherwise white in Chrome */
+      }
+      
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+      }
+      
+      input[type=range]:focus {
+        outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+      }
+      
+      input[type=range]::-ms-track {
+        width: 100%;
+        cursor: pointer;
+      
+        /* Hides the slider so custom styles can be added */
+        background: transparent; 
+        border-color: transparent;
+        color: transparent;
+      }
+
+    input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3.5px;
+    cursor: pointer;
+    background: #fff;
+    }
+
+    input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3.5x;
+    cursor: pointer;
+    background: #fff;
+    position: absolute !important;
+    bottom: 15px !important;
+    }
+
+    input[type=range]::-ms-track {
+    width: 100%;
+    height: 3.5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+    }
+    input[type=range]::-moz-range-track,
+    input[type=range]::-ms-fill-lower,
+    input[type=range]:focus::-ms-fill-lower,
+    input[type=range]::-ms-fill-upper ,
+    input[type=range]:focus::-ms-fill-upper,
+    input[type=range]:focus::-webkit-slider-runnable-track 
+     {
+    background: #fff;
+    }
+    
+    input[type=range]::-ms-fill-upper {
+    border-radius: 2.6px;
+    }
+    /* Special styling for WebKit/Blink */
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50px;
+        background: #ffffff;
+        cursor: pointer;
+        margin-top: -8px;
+    }
+    
+    /* All the same stuff for Firefox */
+    /* All the same stuff for IE */
+    input[type=range]::-moz-range-thumb,
+    input[type=range]::-ms-thumb {
+        height: 36px;
+        width: 16px;
+        border-radius: 3px;
+        background: #ffffff;
+        cursor: pointer;
+        margin-top: -8px;
+    }
+    .quiz-content{
+        display: flex;
+        align-items: baseline;
+        /* flex-direction: row; */
+        height: 460px;
+        padding: 10px;
+        /* position: relative; */
+    }
+    .quiz-content img{
+        width: 100%;
+    }
+    .question {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .quiz-image {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+        padding-top: 60px;
+    }
+    span.text {
+        position: relative;
+        width: 50px;
+        left: -27px;
+    }
+    .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: 220px;
+        background-color: #fff;
+        font-size: 25px;
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 auto;
+    }
+  
+    .select-selected {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        box-shadow: 3.75pt 0.052083333in rgba(0,0,0,.3);
+        border: 2px solid #000;
+    }
+    select#select-no1 {
+        background-color: #fff;
+        font-size: 25px;
+        display: none !important;
+    }
+    .bootstrap-select>select {
+        position: absolute!important;
+        bottom: 0;
+        left: 0;
+        display: block!important;
+        width: .5px!important;
+        height: 100%!important;
+        padding: 0!important;
+        opacity: 0!important;
+        border: none;
+        background-color: #fff;
+        font-size: 25px;
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 auto;
+    }
+    .btn-light:not(:disabled):not(.disabled).active:focus,
+     .btn-light:not(:disabled):not(.disabled):active:focus, 
+     .show>.btn-light.dropdown-toggle:focus {
+        box-shadow: unset;
+    }
+    .bootstrap-select .dropdown-toggle:focus {
+        /* outline: thin dotted #333!important; */
+        outline: none !important;
+        outline-offset: -2px;
+        border: unset;
+        -webkit-appearance: none;
+    }
+    .btn-light:not(:disabled):not(.disabled).active, 
+    .btn-light:not(:disabled):not(.disabled):active,
+     .show>.btn-light.dropdown-toggle {
+        color: #212529;
+        background-color: transparent;
+        border-color: unset;
+        /* left: -7px;
+        top: -7px; */
+        border: none;
+    }    
+    .bootstrap-select>.dropdown-toggle {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        text-align: right;
+        border: none;
+        width: 50px;
+        height: 50px;
+    }
+    .bootstrap-select .dropdown-toggle .filter-option {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: inherit;
+        height: 100%;
+        width: 50px;
+        text-align: left;
+        font-size: 2.5rem;
+        color: #0fa0c5;
+        -webkit-appearance: none;
+    }
+    .bootstrap-select .dropdown-toggle .filter-option-inner {
+        padding-right: 3px;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 3px;
+        top: 2px;
+        padding-left: 10px;
+    
+    }
+    .filter-option:focus {
+        -webkit-appearance: none;
+        outline: unset;
+    }
+
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+    overflow: hidden;
+    display: none;
+}
+.dropdown.bootstrap-select.select-selected.show.dropup .dropdown-menu.show {
+    transform: none !important;
+    top: -250px !important;
+    border-radius: unset; 
+    left: -2px !important;
+    width: 50px;
+    border: 2px solid #000;
+    border-bottom: none;
+}
+.bootstrap-select .dropdown-menu li:last-child{
+    border-bottom: unset;
+}
+
+.inner.show {
+    overflow: hidden !important;
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
+    /* margin: 0px -8px; */
+    /* padding: 4px; */
+}
+bootstrap-select .dropdown-menu.inner {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bootstrap-select .dropdown-menu li {
+    position: relative;
+    text-align: center;
+    width: 50px;
+    border-bottom: 1px dotted #000;
+    overflow: hidden;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+   
+    background-color: #ffffff;
+}
+.dropup .dropdown-toggle::after {
+    border-bottom: unset;
+}
+.btn-light:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+.btn-light.focus, .btn-light:focus {
+    box-shadow: unset;
+}
+.btn-light {
+    color: #212529;
+    background-color: transparent;
+}
+
+.dropdown-toggle::after {
+    border-top: none;
+}
+ul.dropdown-menu.inner.show {
+    border: none !important;
+}
+.queDropDown {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    align-items: flex-end;
+    bottom: 50px;
+    right: 34px;
+}
+.queDropDown.dropDown_1 {
+    right: 0;
+}
+.queDropDown.dropDown_2 {
+    right: 65px;
+}
+
+@keyframes wrongAnimation {
+    0%   {border: 2px solid #000;}
+    25%  {border: 2px solid #c13629;}
+    50%  {border: 2px solid #000;}
+    75%  {border: 2px solid #c13629;}
+    100% {border: 2px solid #000;}
+}
+.wrong{
+    animation: wrongAnimation 1s;
+    
+}
+.correct{
+    border: 2px solid rgb(163, 207, 98);
+    background-color: #ebebeb !important;
+    overflow: hidden;
+    cursor: default !important;
+}
+
+.disabledimage{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.correct button:hover {
+    background-color: #ebebeb;
+}
+.correct .filter-option-inner-inner {
+    display: block !important;
+}
+.wrong .filter-option-inner-inner {
+    display: block !important;
+}
+.correct .dropdown-menu.show ,.correct .dropdown-menu{
+    display: none;
+}
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:disabled ,
+button:disabled:hover,
+.bootstrap-select.disabled button:hover,
+ .bootstrap-select>.disabled button:hover{
+    cursor: default;
+}
+.replay{
+    width: 60px;
+    height: 60px;
+    /* position: absolute;
+    left: 60px;
+    top: 60px; */
+    margin-top: 45px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.show-ans {
+    /* position: absolute; */
+    width: 79px;
+    cursor: pointer;
+    margin-top: 45px;
+}
